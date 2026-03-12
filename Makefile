@@ -42,7 +42,7 @@ download:
 .PHONY: src.build
 src.build:
 	$(MKDIR_P) $(BUILD_FOLDER)/pkg/cmd/gin-apiserver/
-	GO111MODULE=on $(GO) build -mod=vendor -v -o $(BUILD_FOLDER)/pkg/cmd/gin-apiserver/gin-apiserver \
+	GO111MODULE=on $(GO) build -mod=mod -v -o $(BUILD_FOLDER)/pkg/cmd/gin-apiserver/gin-apiserver \
 	./cmd/...
 
 ## dockerfiles/ ########################################

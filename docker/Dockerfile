@@ -1,5 +1,5 @@
 # Building stage
-FROM golang:1.11-alpine3.9
+FROM docker.m.daocloud.io/golang:1.24
 
 RUN apk add --update make
 
@@ -27,6 +27,6 @@ COPY --from=0 /go/bin /go/bin
 
 COPY etc/gin-apiserver.yaml /etc/gin-apiserver/gin-apiserver.yaml
 
-EXPOSE 8081
+EXPOSE 80
 
 ENTRYPOINT ["./gin-apiserver"]
