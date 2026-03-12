@@ -47,8 +47,18 @@ var flagsOpts = []flagOpt{
 		optUsage:        "rabbitmq exchange",
 	},
 	{
+		optName:         FLAG_KEY_RABBIT_TYPE,
+		optDefaultValue: "direct",
+		optUsage:        "rabbitmq exchange type",
+	},
+	{
 		optName:         FLAG_KEY_RABBIT_QUEUE,
 		optDefaultValue: "",
 		optUsage:        "rabbitmq queue",
+	},
+	{
+		optName:         FLAG_KEY_RABBIT_ROUTING,
+		optDefaultValue: "",
+		optUsage:        "rabbitmq routing key",
 	},
 }
