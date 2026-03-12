@@ -21,4 +21,34 @@ var flagsOpts = []flagOpt{
 		optDefaultValue: "info",
 		optUsage:        "log level",
 	},
+	{
+		optName:         FLAG_KEY_MYSQL_DSN,
+		optDefaultValue: "",
+		optUsage:        "mysql dsn",
+	},
+	{
+		optName:         FLAG_KEY_MYSQL_MAX_IDLE,
+		optDefaultValue: 10,
+		optUsage:        "mysql max idle connections",
+	},
+	{
+		optName:         FLAG_KEY_MYSQL_MAX_OPEN,
+		optDefaultValue: 20,
+		optUsage:        "mysql max open connections",
+	},
+	{
+		optName:         FLAG_KEY_RABBIT_URL,
+		optDefaultValue: "",
+		optUsage:        "rabbitmq connection url",
+	},
+	{
+		optName:         FLAG_KEY_RABBIT_EXCH,
+		optDefaultValue: "",
+		optUsage:        "rabbitmq exchange",
+	},
+	{
+		optName:         FLAG_KEY_RABBIT_QUEUE,
+		optDefaultValue: "",
+		optUsage:        "rabbitmq queue",
+	},
 }
