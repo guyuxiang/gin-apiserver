@@ -1,8 +1,6 @@
 # Building stage
 FROM docker.m.daocloud.io/golang:1.24
 
-RUN apk add --update make
-
 WORKDIR /go/src/github.com/guyuxiang/gin-apiserver
 
 COPY . /go/src/github.com/guyuxiang/gin-apiserver
@@ -10,17 +8,17 @@ COPY . /go/src/github.com/guyuxiang/gin-apiserver
 ENV CGO_ENABLED 0
 ENV GOOS linux
 ENV GO111MODULE=on
-
 ENV TIMEZONE "Asia/Shanghai"
+ENV GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
 
 RUN make src.build
 RUN mv build/pkg/cmd/gin-apiserver/gin-apiserver /go/bin
 
 # Production stage
-FROM alpine:3.9
+FROM docker.m.daocloud.io/golang:1.24
 WORKDIR /go/bin
 
-LABEL maintainer="guyuxiang <guyuxiang@qq.com>"
+LABEL maintainer="guyuxiang <gu_yuxiang@qq.com>"
 
 # copy the go binaries from the building stage
 COPY --from=0 /go/bin /go/bin

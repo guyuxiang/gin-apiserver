@@ -19,7 +19,7 @@ var doc = `{
         "contact": {
             "name": "guyuxiang",
             "url": "https://guyuxiang.github.io",
-            "email": "guyuxiang@qq.com"
+            "email": "gu_yuxiang@qq.com"
         },
         "license": {
             "name": "Apache 2.0",
