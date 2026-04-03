@@ -14,16 +14,8 @@ mysql:
   maxIdleConns: 10
   maxOpenConns: 20
 rabbitmq:
-  enabled: true
   url: "amqp://guest:guest@127.0.0.1:5672/"
   exchange: "gin-apiserver.exchange"
   exchangeType: "direct"
   queue: "gin-apiserver.queue"
   routingKey: "gin-apiserver.queue"
-  txExchange: "gin-apiserver.tx.exchange"
-  rollbackExchange: "gin-apiserver.rollback.exchange"
-  txQueue: "gin-apiserver.tx.queue"
-  rollbackQueue: "gin-apiserver.rollback.queue"
-  retryDelayMs: 5000
-  maxRetry: 3
-  prefetchCount: 10

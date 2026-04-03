@@ -35,17 +35,9 @@ type MySQL struct {
 }
 
 type RabbitMQ struct {
-	Enabled          bool   `yaml:"enabled"`
-	URL              string `yaml:"url"`
-	Exchange         string `yaml:"exchange"`
-	ExchangeType     string `yaml:"exchangeType"`
-	Queue            string `yaml:"queue"`
-	RoutingKey       string `yaml:"routingKey"`
-	TxExchange       string `yaml:"txExchange"`
-	RollbackExchange string `yaml:"rollbackExchange"`
-	TxQueue          string `yaml:"txQueue"`
-	RollbackQueue    string `yaml:"rollbackQueue"`
-	RetryDelayMs     int    `yaml:"retryDelayMs"`
-	MaxRetry         int    `yaml:"maxRetry"`
-	PrefetchCount    int    `yaml:"prefetchCount"`
+	URL          string `yaml:"url"`
+	Exchange     string `yaml:"exchange"`
+	ExchangeType string `yaml:"exchangeType"`
+	Queue        string `yaml:"queue"`
+	RoutingKey   string `yaml:"routingKey"`
 }

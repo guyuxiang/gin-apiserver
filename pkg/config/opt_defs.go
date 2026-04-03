@@ -42,11 +42,6 @@ var flagsOpts = []flagOpt{
 		optUsage:        "rabbitmq connection url",
 	},
 	{
-		optName:         FLAG_KEY_RABBIT_ENABLED,
-		optDefaultValue: false,
-		optUsage:        "enable rabbitmq integration",
-	},
-	{
 		optName:         FLAG_KEY_RABBIT_EXCH,
 		optDefaultValue: "",
 		optUsage:        "rabbitmq exchange",
@@ -65,40 +60,5 @@ var flagsOpts = []flagOpt{
 		optName:         FLAG_KEY_RABBIT_ROUTING,
 		optDefaultValue: "",
 		optUsage:        "rabbitmq routing key",
-	},
-	{
-		optName:         FLAG_KEY_RABBIT_TX_EXCH,
-		optDefaultValue: "",
-		optUsage:        "rabbitmq tx exchange",
-	},
-	{
-		optName:         FLAG_KEY_RABBIT_RB_EXCH,
-		optDefaultValue: "",
-		optUsage:        "rabbitmq rollback exchange",
-	},
-	{
-		optName:         FLAG_KEY_RABBIT_TX_QUEUE,
-		optDefaultValue: "",
-		optUsage:        "rabbitmq tx queue",
-	},
-	{
-		optName:         FLAG_KEY_RABBIT_RB_QUEUE,
-		optDefaultValue: "",
-		optUsage:        "rabbitmq rollback queue",
-	},
-	{
-		optName:         FLAG_KEY_RABBIT_RETRY_DELAY,
-		optDefaultValue: 5000,
-		optUsage:        "rabbitmq retry delay milliseconds",
-	},
-	{
-		optName:         FLAG_KEY_RABBIT_MAX_RETRY,
-		optDefaultValue: 3,
-		optUsage:        "rabbitmq max retry count",
-	},
-	{
-		optName:         FLAG_KEY_RABBIT_PREFETCH,
-		optDefaultValue: 10,
-		optUsage:        "rabbitmq consumer prefetch count",
 	},
 }
