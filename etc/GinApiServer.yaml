@@ -16,6 +16,4 @@ mysql:
 rabbitmq:
   url: "amqp://guest:guest@127.0.0.1:5672/"
   exchange: "gin-apiserver.exchange"
-  exchangeType: "direct"
   queue: "gin-apiserver.queue"
-  routingKey: "gin-apiserver.queue"

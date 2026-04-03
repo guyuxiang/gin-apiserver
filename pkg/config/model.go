@@ -35,9 +35,7 @@ type MySQL struct {
 }
 
 type RabbitMQ struct {
-	URL          string `yaml:"url"`
-	Exchange     string `yaml:"exchange"`
-	ExchangeType string `yaml:"exchangeType"`
-	Queue        string `yaml:"queue"`
-	RoutingKey   string `yaml:"routingKey"`
+	URL      string `yaml:"url"`
+	Exchange string `yaml:"exchange"`
+	Queue    string `yaml:"queue"`
 }

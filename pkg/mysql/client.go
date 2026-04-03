@@ -29,11 +29,6 @@ func Init(cfg *config.MySQL) (*gorm.DB, error) {
 	if err != nil {
 		return nil, err
 	}
-	defer func() {
-		if err != nil {
-			_ = sqlDB.Close()
-		}
-	}()
 
 	configurePool(sqlDB, cfg)
 	if err = sqlDB.Ping(); err != nil {
