@@ -1,12 +1,10 @@
 package config
 
 type Config struct {
-	Server   *Server   `yaml:"server"`
-	Auth     *Auth     `yaml:"auth"`
-	Gin      *Gin      `yaml:"gin"`
-	Log      *Log      `yaml:"log"`
-	MySQL    *MySQL    `yaml:"mysql"`
-	RabbitMQ *RabbitMQ `yaml:"rabbitmq"`
+	Server *Server `yaml:"server"`
+	Auth   *Auth   `yaml:"auth"`
+	Gin    *Gin    `yaml:"gin"`
+	Log    *Log    `yaml:"log"`
 }
 
 type Server struct {
@@ -26,16 +24,4 @@ type Gin struct {
 
 type Log struct {
 	Level string `yaml:"level"`
-}
-
-type MySQL struct {
-	DSN          string `yaml:"dsn"`
-	MaxIdleConns int    `yaml:"maxIdleConns"`
-	MaxOpenConns int    `yaml:"maxOpenConns"`
-}
-
-type RabbitMQ struct {
-	URL      string `yaml:"url"`
-	Exchange string `yaml:"exchange"`
-	Queue    string `yaml:"queue"`
 }
